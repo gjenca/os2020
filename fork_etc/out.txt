@@ -1,0 +1,9 @@
+Toto uz ide do out.txt
+celkom 76
+-rwxr-xr-x 1 gejza gejza 16752 sep 29 09:38 fork1
+-rw-r--r-- 1 gejza gejza   382 sep 29 09:38 fork1.c
+-rwxr-xr-x 1 gejza gejza 16864 sep 29 12:34 fork2
+-rw-r--r-- 1 gejza gejza   580 sep 29 12:34 fork2.c
+-rwxr-xr-x 1 gejza gejza 17120 sep 29 13:32 fork3
+-rw-r--r-- 1 gejza gejza   922 sep 29 13:31 fork3.c
+-rw-r--r-- 1 gejza gejza    23 sep 29 13:32 out.txt
