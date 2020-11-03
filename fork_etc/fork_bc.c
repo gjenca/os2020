@@ -38,7 +38,11 @@ int main() {
 			fscanf(fpr,"%d",&vys);
 			printf("9*%d=%d\n",i,vys);
 		}
+<<<<<<< HEAD
 		fflush(fpw);
+=======
+		fclose(fpw);
+>>>>>>> 2bf23a3b493c5187c518841364037096fbbd09af
 		fclose(fpr);
 	}
 	else {

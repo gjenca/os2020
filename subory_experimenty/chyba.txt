@@ -1,0 +1,1 @@
+ls: nie je možné pristupovať k '/neex': Adresár alebo súbor neexistuje
