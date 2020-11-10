@@ -1,0 +1,9 @@
+#!/bin/bash
+
+SEARCH_ARG=$(echo $1 | tr ' ' '+')
+URL='https://arxiv.org/search/?query=%22'"$SEARCH_ARG"'%22&searchtype=all&abstracts=show&order=-announced_date_first&size=50'
+curl -s "$URL" |
+	tr -d '\n' |
+	tr '<' '\n' | 
+	grep 'https://arxiv.org/abs' |
+	sed 's/.*arXiv://'

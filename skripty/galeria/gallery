@@ -1,0 +1,54 @@
+#!/bin/bash
+NADPIS="Galeria"
+PERCENT="15"
+while true
+do
+if [ "$1" == "-t" ]
+then
+	NADPIS="$2"
+	shift 2
+elif [ "$1" == "-p" ]
+then
+	PERCENT="$2"
+	shift 2
+else
+	break
+fi
+done
+
+
+
+if test ! -d mini
+then 
+	mkdir mini
+fi
+cat <<THE_END
+<html>
+<head>
+<title>
+$NADPIS
+</title>
+</head>
+<body>
+<h1>
+$NADPIS
+</h1>
+<ul>
+THE_END
+while test "$#" != 0 
+do
+	MINI=$(echo "$1" | sed 's/\.jpg$/.png/')
+	convert -resize "$PERCENT"% "$1" "mini/$MINI"
+	echo '<li>'
+	echo '<a href="'$1'">'
+	echo '<img src="mini/'$MINI'" />'
+	echo '</a>'
+	echo '</li>'
+	shift
+done
+cat <<THE_END
+</ul>
+</body>
+</html>
+THE_END
+

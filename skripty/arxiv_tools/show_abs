@@ -1,0 +1,9 @@
+#!/bin/bash
+
+while [ "$#" != "0" ]
+do
+	ID="$1"
+	shift
+	curl -s 'https://arxiv.org/abs/'"$ID" | tr -d '\n' | tr '<' '\n' | grep '^meta' |
+		grep 'og:title' | sed 's/.*content="//' | sed 's@"/> *@@'
+done
