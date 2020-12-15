@@ -3,7 +3,9 @@
 '''
 
 import math
+from closure import add_debug
 
+@add_debug  #dekorator
 def eratosthenes(n):
     '''Vráti zoznam všetkých prvočísel <= n
 '''
@@ -15,4 +17,5 @@ def eratosthenes(n):
             s.discard(l)
     return sorted(s)
 
-# print(eratosthenes(100))
+#eratosthenes=closure.add_debug(eratosthenes)
+
