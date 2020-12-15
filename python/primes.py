@@ -13,4 +13,3 @@ def primes(m):
             zoz.append(n)
     return zoz
 
-print(primes(100))

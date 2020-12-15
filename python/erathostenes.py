@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
+'''Dokumentácia k modulu
+'''
 
 import math
 
 def eratosthenes(n):
-
+    '''Vráti zoznam všetkých prvočísel <= n
+'''
     s=set(range(2,n))
     for k in range(2,int(math.sqrt(n))+1):
         if k not in s:
@@ -12,4 +15,4 @@ def eratosthenes(n):
             s.discard(l)
     return sorted(s)
 
-print(eratosthenes(100))
+# print(eratosthenes(100))
